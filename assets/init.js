@@ -59,11 +59,9 @@ function start_app(){
 	}
 	scripts_object_l = localStorage.getItem('scripts_object');
 	scripts_object = JSON.parse(scripts_object_l);
-	console.log('new version: '+global_settings_obj.newVersion);
 	if(scripts_object_l==null || typeof(scripts_object)!='object' || global_settings_obj.reloadonstartup || global_settings_obj.newVersion){
-		console.log('init');
 		$.ajax({
-			url:'../init.php',
+			url:'init.php',
 			xhrFields: {
 			   //withCredentials: true
 			},
@@ -80,11 +78,15 @@ function start_app(){
 			success: function(a){
 		
 				var _obj = JSON.parse(a);
-				console.log(_obj);
 				if(_obj && _obj.status=='success'){
 					object = _obj.response;
 					scripts_object = object.scripts;
 					count = 0;
+					if(typeof(object.profile)!='object'){
+						test_oath = JSON.parse(object.profile);
+						alert(test_oath.errors[0].message);
+						return;
+					}
 					localStorage.setItem('profile', object.profile.tokenss);
 					localStorage.setItem('user_data', JSON.stringify(object.profile.user_data));
 					localStorage.setItem('app_data', JSON.stringify(object.app_data));

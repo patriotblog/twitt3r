@@ -2,11 +2,12 @@
 	$config = array(
 		'Consumer_key'=>'', //put your consumer key here. go to here https://dev.twitter.com/apps
 		'Consumer_secret'=>'', //put your consumer secret here
+		'script_location'=>'', // put your domain here. sample: http://twitt3r.ir/test/
 		'cookie_screen_name'=>'screen_name',
 		'cookie_user_profile'=>'user_profile',
 		'access_token'=>'x_access_token',
 		'call_back'=>'call_back',
-		'scripts_version'=>'1.0.2.16'
+		'scripts_version'=>'1.0.3',
 	);
 	
 

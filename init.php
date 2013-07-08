@@ -45,7 +45,7 @@ $tmhOAuth = new tmhOAuth(array(
 ));
 
 $version = $config['scripts_version'];
-$server_location = dirname(__FILE__);
+$server_location = $config['script_location'];
 $js_list = array(
 	urlencode($server_location.'assets.php?src=json2.js'),
 	urlencode($server_location.'assets.php?src=underscore-min.js'),
