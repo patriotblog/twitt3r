@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        
+        <link rel="apple-touch-startup-image" href="assets/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="assets/images/twitter_mini.png" />
+        <link rel="apple-touch-icon-precomposed" href="assets/images/twitter_mini.png" />
+        <link rel="apple-mobile-web-app-capable" href="assets/images/twitter_mini.png" />
+        
+        
+        
+		
+		
+		
+        <link rel="stylesheet" type="text/css" href="style.css?v=1.0.0" />
+    
+        <script src="assets/jquery-1.8.3.min.js"></script>
+		<script src="assets/scripts.js?v=1.0.1"></script>
+        <script src="assets/init.js?v=1.0.9"></script>
+        
+        <title>Twitt3r</title>
+    </head>
+    <body class="body ">
+        <div class="current">
+        <div class="flash"></div>		
+        <ul class="menu">
+            <li><a href="index.php">Home</a></li>
+            <li><a href="timeline.php">old version</a></li>
+            <li><a href="send.php">Ping</a></li>
+            <li><a href="home.php?_toch_view">timeline</a></li>
+        </ul>
+        
+        
+        <form action="action.php?w=send" id="send_twitt" method="post">
+            
+            <input type="hidden" name="reply" class="reply" />
+            
+            <button type="submit" class="submit">Send</button>
+            <button type="reset" class="reset">Cancel</button>
+            <center>New Update</center>
+            <textarea name="twitt" placeholder="تازه چه خبر؟ ;)"></textarea>
+            
+            <div class="counter">0</div>
+            <div class="fix"></div>
+            
+        </form>
+        <input type="hidden" class="myusername" value="" />
+        <input type="hidden" class="currentuserprofile" value="" />
+        <div class="twitts" id="twitts"></div>
+        <div class="users" id="users"></div>
+        <div class="install_loader">
+            <div class="pers"></div>
+        </div>
+        </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41837529-1', 'twitt3r.ir');
+  ga('send', 'pageview');
+
+</script>
+    </body>
+</html>
